@@ -1,11 +1,27 @@
-// variables.scss
-
-$font-main: 'Montserrat', sans-serif;
-
-$color-primary: #ff6060;
-$color-bg: #f6f6f6;
-$color-dark: #000;
-$color-light: #fff;
-
+// ---- Breakpoints ----
 $breakpoint-mobile: 768px;
-$breakpoint-tablet: 1024px;
+
+// ---- Couleurs ----
+$color-primary: #FF6060;
+$color-black: #000;
+$color-white: #fff;
+
+// ---- Fonts ----
+$font-main: 'Montserrat', sans-serif;
+$font-size-nav: 24px;
+$font-weight-medium: 500;
+
+// ---- Header ----
+$header-width: 1240px;
+$header-height: 68px;
+$header-margin-top: 45px;
+$header-logo-width: 136px;
+$header-logo-height: 34px;
+
+$gap-between-links: 57px;
+$space-between-logo-nav: 720px;
+
+// ---- Layout ----
+$max-width: 1240px;
+$container-padding: 100px;
+$container-padding-mobile: 20px;

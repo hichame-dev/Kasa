@@ -1,21 +1,44 @@
 .header {
+  padding: 45px 0;
+}
+.header__container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 100px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 40px 20px;
+  justify-content: space-between;
 }
 .header__logo {
-  height: 68px;
+  height: 34px;
 }
 .header__nav {
   display: flex;
-  gap: 30px;
+  gap: 57px;
 }
 .header__nav a {
-  text-decoration: none;
-  color: black;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
 }
 .header__nav a.active {
   text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+  .header__container {
+    padding: 0 20px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header__logo {
+    height: 30px;
+  }
+  .header__nav {
+    gap: 20px;
+  }
+  .header__nav a {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=Header.css.map */
