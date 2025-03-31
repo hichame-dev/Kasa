@@ -1,12 +1,27 @@
-# React + Vite
+# 🏠 Kaza – Plateforme de location d’appartements
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projet front-end réalisé en React avec Vite, basé sur une maquette Figma.  
+Développement d’une interface responsive avec affichage dynamique de logements à partir de données JSON.
 
-Currently, two official plugins are available:
+🔗 **Lien du dépôt GitHub** :  
+👉 [https://github.com/hichame-dev/Kaza](https://github.com/hichame-dev/Kaza)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Stack technique
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ **React** (via Vite)
+- 🎨 **Sass (SCSS)** pour le style
+- 📦 **React Router DOM** pour la navigation
+- 📁 **📁 **Données simulées** en JSON
+
+- 🧩 Architecture en **composants réutilisables**
+- 📐 Design 100% conforme à **Figma**
+
+---
+
+
+
+
+
+
