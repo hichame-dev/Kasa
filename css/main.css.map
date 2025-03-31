@@ -1,0 +1,1 @@
+{"version":3,"sources":["..\\src\\styles\\main.scss","main.css"],"names":[],"mappings":"AAEA;EACI,qCAAA;ACDJ","file":"main.css","sourcesContent":["@import '../styles/variables.scss';\r\n\r\nbody {\r\n    font-family: $font-main;\r\n}","body {\n  font-family: \"Montserrat\", sans-serif;\n}"]}
