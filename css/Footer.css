@@ -1,0 +1,29 @@
+.footer {
+  height: 209px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.footer__logo {
+  width: 122px;
+  height: 39.44px;
+  margin-bottom: 20px;
+}
+.footer__text {
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: 209px;
+    padding: 0;
+  }
+  .footer__logo {
+    margin-top: -26px;
+  }
+}/*# sourceMappingURL=Footer.css.map */

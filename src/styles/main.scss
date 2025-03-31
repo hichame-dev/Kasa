@@ -1,5 +1,19 @@
-@import '../styles/variables.scss';
+// Import des variables en premier
+@import './variables';
 
-body {
-    font-family: $font-main;
+// Import du reset + styles globaux
+@import './global';
+
+/* src/styles/Main.scss */
+
+
+
+main {
+    flex: 1;
+    max-width: $max-width;
+    padding: 20px $container-padding;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }

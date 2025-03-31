@@ -1,0 +1,49 @@
+/* src/styles/global.scss */
+
+@import './variables';
+
+// Reset de base
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Styles globaux
+body {
+    font-family: $font-main;
+    color: $color-black;
+    background-color: $color-white;
+    font-weight: $font-weight-medium;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// Structure globale du layout
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#root>* {
+    flex: 1;
+}

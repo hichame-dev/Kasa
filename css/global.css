@@ -37,15 +37,4 @@ body {
 
 #root > * {
   flex: 1;
-}
-
-/* src/styles/Main.scss */
-main {
-  flex: 1;
-  max-width: 1240px;
-  padding: 20px 100px;
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=global.css.map */
