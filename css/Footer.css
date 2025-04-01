@@ -1,29 +1,29 @@
 .footer {
-  height: 209px;
   background-color: #000;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 3.125rem 0;
+  box-sizing: border-box;
+  text-align: center;
 }
 .footer__logo {
-  width: 122px;
-  height: 39.44px;
-  margin-bottom: 20px;
+  width: 7.625rem;
+  height: 2.465rem;
+  margin-bottom: 1.25rem;
 }
 .footer__text {
-  font-size: 14px;
-  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
   .footer {
-    height: 209px;
-    padding: 0;
+    padding: 2.5rem 1.25rem;
   }
   .footer__logo {
-    margin-top: -26px;
+    margin-top: -1.625rem;
   }
 }/*# sourceMappingURL=Footer.css.map */

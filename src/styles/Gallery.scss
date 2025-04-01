@@ -1,0 +1,14 @@
+.gallery {
+    background-color: rgba(246, 246, 246, 1);
+    width: 100%;
+    max-width: 80.5rem; // 1240px
+    margin: 0 auto;
+    padding: 3.125rem; // 50px
+    display: grid;
+
+    // ✅ Grille responsive avec cartes de 340px
+    grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr)); // 340px
+    gap: 3.125rem 3.75rem; // 50px vertical / 60px horizontal
+    border-radius: 1.5625rem; // 25px
+    box-sizing: border-box;
+}

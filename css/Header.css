@@ -1,25 +1,32 @@
 .header {
-  padding: 45px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.125rem;
 }
 .header__container {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 100px;
-  display: flex;
+  width: 100%;
+  max-width: 77.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  justify-content: space-between;
+  -moz-column-gap: 3.125rem;
+       column-gap: 3.125rem;
+  box-sizing: border-box;
 }
 .header__logo {
-  height: 34px;
+  height: 4.6875rem;
+  display: block;
 }
 .header__nav {
   display: flex;
-  gap: 57px;
+  justify-content: flex-end;
+  gap: 3.125rem;
 }
 .header__nav a {
   font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
   font-weight: 500;
-  font-size: 24px;
   color: #000;
   text-decoration: none;
 }
@@ -28,17 +35,18 @@
 }
 @media screen and (max-width: 768px) {
   .header__container {
-    padding: 0 20px;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .header__logo {
-    height: 30px;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
   }
   .header__nav {
-    gap: 20px;
+    justify-content: center;
+    gap: 1.25rem;
   }
   .header__nav a {
-    font-size: 18px;
+    font-size: 1.125rem;
+  }
+  .header__logo {
+    height: 1.875rem;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=Header.css.map */

@@ -1,8 +1,6 @@
-// src/styles/Footer.scss
 @import './variables';
 
 .footer {
-    height: 209px;
     background-color: $color-black;
     color: $color-white;
     display: flex;
@@ -10,28 +8,28 @@
     align-items: center;
     justify-content: center;
 
-    padding: 0; // ✅ On retire tout padding global
+    padding: 3.125rem 0; // 50px haut/bas
+    box-sizing: border-box;
+    text-align: center;
 
     &__logo {
-        width: 122px;
-        height: 39.44px;
-        margin-bottom: 20px;
+        width: 7.625rem; // 122px
+        height: 2.465rem; // 39.44px
+        margin-bottom: 1.25rem; // 20px
     }
 
     &__text {
-        font-size: 14px;
-        text-align: center;
+        font-size: 0.875rem; // 14px
+        line-height: 1.5;
     }
 }
 
-// Responsive mobile (375px)
 @media (max-width: 768px) {
     .footer {
-        height: 209px;
-        padding: 0; // ✅ Pas de padding ici non plus
+        padding: 2.5rem 1.25rem; // 40px top/bottom, 20px sides
 
         &__logo {
-            margin-top: -26px; // ✅ Distance avec le bord haut en mobile
+            margin-top: -1.625rem; // -26px
         }
     }
 }
