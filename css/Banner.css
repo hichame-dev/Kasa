@@ -1,15 +1,19 @@
 .banner-wrapper {
   width: 100%;
+  padding: 0 6.25rem;
+  box-sizing: border-box;
+  margin-bottom: 3.125rem;
 }
 
 .banner {
   width: 100%;
+  max-width: 90rem;
   height: 13.9375rem;
   border-radius: 1.5625rem;
   overflow: hidden;
   position: relative;
-  margin-bottom: 3.125rem;
   background-color: black;
+  margin: 0 auto;
 }
 .banner__img {
   width: 100%;
@@ -35,10 +39,9 @@
   color: white;
   font-size: 3rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.43;
   z-index: 2;
   text-align: center;
-  white-space: nowrap;
   padding: 0 1rem;
   text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
@@ -49,9 +52,7 @@
   .banner__text {
     font-size: 1.5rem;
     text-align: left;
-    white-space: normal;
     left: 1rem;
     transform: translateY(-50%);
-    width: calc(100% - 2rem);
   }
 }/*# sourceMappingURL=Banner.css.map */
