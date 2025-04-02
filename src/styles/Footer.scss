@@ -1,4 +1,4 @@
-@import './variables';
+@use '../styles/variables' as *;
 
 .footer {
     background-color: $color-black;

@@ -1,8 +1,8 @@
 // Import des variables en premier
-@import './variables';
+@use '../styles/variables' as *;
 
 // Import du reset + styles globaux
-@import './global';
+@use './global' as *;
 
 /* src/styles/Main.scss */
 
