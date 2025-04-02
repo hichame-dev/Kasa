@@ -2,7 +2,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 3.125rem; // ✅ 50px d'espace sous le header
+    margin: 3.125rem 0; // ✅ 50px en haut et 50px en bas
+
 
     &__container {
         width: 100%;
@@ -58,3 +59,4 @@
         }
     }
 }
+

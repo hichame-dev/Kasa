@@ -1,13 +1,12 @@
 .banner-wrapper {
   width: 100%;
-  padding: 0 6.25rem;
   box-sizing: border-box;
   margin-bottom: 3.125rem;
 }
 
 .banner {
   width: 100%;
-  max-width: 90rem;
+  max-width: 100rem;
   height: 13.9375rem;
   border-radius: 1.5625rem;
   overflow: hidden;
@@ -33,7 +32,7 @@
 }
 .banner__text {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -44,6 +43,7 @@
   text-align: center;
   padding: 0 1rem;
   text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
 }
 @media (max-width: 768px) {
   .banner {

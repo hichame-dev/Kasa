@@ -1,19 +1,20 @@
 .banner-wrapper {
     width: 100%;
-    padding: 0 6.25rem; // 100px sur les côtés
     box-sizing: border-box;
     margin-bottom: 3.125rem; // 50px
 }
 
 .banner {
     width: 100%;
-    max-width: 90rem; // 1240px
+    max-width: 100rem; // 1240px
     height: 13.9375rem; // 223px
     border-radius: 1.5625rem; // 25px
     overflow: hidden;
     position: relative;
     background-color: black;
     margin: 0 auto;
+
+
 
     &__img {
         width: 100%;
@@ -34,7 +35,7 @@
 
     &__text {
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
@@ -45,6 +46,7 @@
         text-align: center;
         padding: 0 1rem;
         text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+        white-space: nowrap; // ✅ empêche le retour à la ligne
     }
 
     @media (max-width: 768px) {

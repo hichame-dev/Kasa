@@ -1,1 +1,19 @@
-/*# sourceMappingURL=global.css.map */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container {
+  width: 100%;
+  max-width: calc(100% - 200px);
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}/*# sourceMappingURL=global.css.map */

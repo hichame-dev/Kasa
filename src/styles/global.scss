@@ -1,69 +1,22 @@
-// /* src/styles/global.scss */
-// @import './variables';
+// global.scss
 
-// // ✅ Reset complet
-// *,
-// *::before,
-// *::after {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-// }
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
 
-// // ✅ Base
-// html {
-//     font-size: 16px; // 1rem = 16px (base)
-// }
-// .container {
-//     width: 100%;
-//     max-width: 77.5rem; // 1240px
-//     margin: 0 auto;
-//     padding: 0 6.25rem; // 100px de chaque côté
-//     box-sizing: border-box;
-// }
-// body {
-//     font-family: $font-main;
-//     font-weight: $font-weight-medium;
-//     line-height: 1.5;
-//     color: $color-black;
-//     background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-//     display: flex;
-//     flex-direction: column;
-//     min-height: 100vh;
-// }
-// main {
-//     margin: 0 auto;
-//     padding: 0 6.25rem; // 100px
-//     width: 100%;
-//     max-width: 77.5rem; // 1240px
-//     box-sizing: border-box;
-// }
-// a {
-//     text-decoration: none;
-//     color: inherit;
-// }
-
-// img {
-//     display: block;
-//     max-width: 100%;
-//     height: auto;
-// }
-
-// // ✅ Main layout
-// #root {
-//     flex: 1;
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// .container {
-//     background: rgba(0, 255, 0, 0.1); // temporaire debug
-// }
-
-// // Responsive padding sur mobile
-// @media (max-width: 768px) {
-//     main {
-//         padding: 0 1.25rem; // 20px sur mobile
-//     }
-// }
+.main-container {
+    width: 100%;
+    max-width: calc(100% - 200px); // 100px de chaque côté
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
