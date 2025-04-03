@@ -1,0 +1,94 @@
+.fiche-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1240px;
+    padding: 0 1rem;
+
+    .infos {
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.25rem;
+            font-weight: 500;
+            color: #ff6060;
+            margin: 0;
+            max-width: 39.6875rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: #000;
+            margin: 0.25rem 0 1rem 0;
+        }
+
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.625rem;
+
+            .tag {
+                background-color: #ff6060;
+                color: white;
+                padding: 0.3rem 1rem;
+                border-radius: 0.625rem; // 10px
+                font-size: 0.875rem;
+                font-weight: 500;
+                min-width: 7.1875rem; // 115px
+                height: 1.5625rem; // 25px
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.host-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+
+    .host {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.125rem; // 18px = 1.125rem
+            font-weight: 500;
+            color: #ff6060;
+
+            padding: 0.2rem 0.8rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        img {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+        .rating {
+            display: flex;
+            gap: 0.3rem;
+    
+            .star {
+                width: 1.546875rem; // 24.75px
+                height: 1.5rem; // 24px
+                object-fit: contain;
+            }
+    
+            .star.filled {
+                filter: brightness(100%); // optionnel si ton étoile rouge est déjà colorée
+            }
+        }
+}

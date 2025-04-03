@@ -2,20 +2,19 @@ import { useParams, Navigate } from 'react-router-dom';
 import logements from '../components/data/logements.json';
 import Slideshow from '../components/Slideshow.jsx';
 import Collapse from '../components/Collapse.jsx';
+import redStar from '../assets/star_red.png';
+import grayStar from '../assets/star_gray.png';
 import '../styles/FicheLogement.scss';
 
 function FicheLogement() {
-    const { id } = useParams()
+    const { id } = useParams(); // Récupération de l’ID de l’URL
 
-    // Récupération dynamique du logement par l'ID
-    const logement = logements.find(logement => logement.id === id)
+    const logement = logements.find(logement => logement.id === id); // Recherche du logement correspondant
 
     if (!logement) {
-        // Si logement non trouvé, redirection vers 404
-        return <Navigate to="/404" />
+        return <Navigate to="/404" />; // Redirection si aucun logement trouvé
     }
 
-    // Affichage des informations dynamiques
     return (
         <div className="fiche-logement">
             <Slideshow images={logement.pictures} />
@@ -26,7 +25,7 @@ function FicheLogement() {
                     <p>{logement.location}</p>
                     <div className="tags">
                         {logement.tags.map(tag => (
-                            <span key={tag} className="tag">{tag}</span>
+                            <span key={tag} className="tag">{tag}</span> // Affichage dynamique des tags
                         ))}
                     </div>
                 </div>
@@ -37,7 +36,14 @@ function FicheLogement() {
                         <img src={logement.host.picture} alt={logement.host.name} />
                     </div>
                     <div className="rating">
-                        {logement.rating} ⭐
+                        {[...Array(5)].map((_, i) => (
+                            <img
+                                key={i}
+                                src={i < Number(logement.rating) ? redStar : grayStar}
+                                alt="étoile"
+                                className="star"
+                            /> // Affichage dynamique des étoiles selon la note
+                        ))}
                     </div>
                 </div>
             </div>
@@ -49,13 +55,13 @@ function FicheLogement() {
                 <Collapse title="Équipements">
                     <ul>
                         {logement.equipments.map(equipment => (
-                            <li key={equipment}>{equipment}</li>
+                            <li key={equipment}>{equipment}</li> // Liste dynamique des équipements
                         ))}
                     </ul>
                 </Collapse>
             </div>
         </div>
-    )
+    );
 }
 
-export default FicheLogement
+export default FicheLogement;
