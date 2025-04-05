@@ -1,29 +1,28 @@
-// src/styles/Gallery.scss
+@use '../styles/variables' as *;
+
 .gallery {
-    background-color: rgba(246, 246, 246, 1);
     width: 100%;
-    max-width: 80.5rem; // 1240px
+    max-width: $max-width;
     margin: 0 auto;
-    padding: 3.125rem; // 50px
+    padding: 3.125rem;
     display: grid;
-
-    // ✅ Grille fixe à 3 colonnes
     grid-template-columns: repeat(3, 1fr);
-    gap: 3.125rem 3.75rem; // 50px vertical / 60px horizontal
-
-    border-radius: 1.5625rem; // 25px
+    gap: 3.125rem 3.75rem;
+    background-color: #f6f6f6;
+    border-radius: 1.5625rem;
     box-sizing: border-box;
-}
 
-// ✅ Responsive
-@media (max-width: 1024px) {
-    .gallery {
+    @media (max-width: 1024px) {
         grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+        gap: 2rem;
     }
-}
 
-@media (max-width: 600px) {
-    .gallery {
+    @media (max-width: 600px) {
         grid-template-columns: 1fr;
+        padding: 1.25rem; // ✅ padding 20px
+        gap: 1.2rem; // 10px
+        background-color: transparent; // ❌ plus de fond gris
+        border-radius: 0; // ❌ plus d'arrondis
     }
 }

@@ -16,52 +16,53 @@ function FicheLogement() {
     }
 
     return (
-        <div className="fiche-logement">
-            <Slideshow images={logement.pictures} />
+        <main className="main">
+            <div className="main__container fiche-logement">
+                <Slideshow images={logement.pictures} />
 
-            <div className="fiche-header">
-                <div className="infos">
-                    <h1>{logement.title}</h1>
-                    <p>{logement.location}</p>
-                    <div className="tags">
-                        {logement.tags.map(tag => (
-                            <span key={tag} className="tag">{tag}</span> // Affichage dynamique des tags
-                        ))}
+                <div className="fiche-header">
+                    <div className="infos">
+                        <h1>{logement.title}</h1>
+                        <p>{logement.location}</p>
+                        <div className="tags">
+                            {logement.tags.map(tag => (
+                                <span key={tag} className="tag">{tag}</span>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="host-rating">
+                        <div className="host">
+                            <span>{logement.host.name}</span>
+                            <img src={logement.host.picture} alt={logement.host.name} />
+                        </div>
+                        <div className="rating">
+                            {[...Array(5)].map((_, i) => (
+                                <img
+                                    key={i}
+                                    src={i < Number(logement.rating) ? redStar : grayStar}
+                                    alt="étoile"
+                                    className="star"
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
 
-                <div className="host-rating">
-                    <div className="host">
-                        <span>{logement.host.name}</span>
-                        <img src={logement.host.picture} alt={logement.host.name} />
-                    </div>
-                    <div className="rating">
-                        {[...Array(5)].map((_, i) => (
-                            <img
-                                key={i}
-                                src={i < Number(logement.rating) ? redStar : grayStar}
-                                alt="étoile"
-                                className="star"
-                            /> // Affichage dynamique des étoiles selon la note
-                        ))}
-                    </div>
+                <div className="collapses-container">
+                    <Collapse title="Description" className="fiche-collapse">
+                        <p>{logement.description}</p>
+                    </Collapse>
+                    <Collapse title="Équipements" className="fiche-collapse">
+                        <ul>
+                            {logement.equipments.map((equipment) => (
+                                <li key={equipment}>{equipment}</li>
+                            ))}
+                        </ul>
+                    </Collapse>
                 </div>
             </div>
-
-            <div className="collapses-container">
-                <Collapse title="Description" className="fiche-collapse">
-                    <p>{logement.description}</p>
-                </Collapse>
-                <Collapse title="Équipements" className="fiche-collapse">
-                    <ul>
-                        {logement.equipments.map((equipment) => (
-                            <li key={equipment}>{equipment}</li>
-                        ))}
-                    </ul>
-                </Collapse>
-            </div>
-
-        </div>
+        </main>
     );
 }
 

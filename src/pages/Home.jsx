@@ -1,14 +1,16 @@
-import React from 'react'; // Ajoute l'import de React (bien que pas strictement nécessaire ici, bonne pratique)
+import React from 'react';
 import Banner from '../components/Banner';
 import Banner_img from '../assets/Banner__img.svg';
 import Gallery from '../components/Gallery/Gallery';
 
-function Home({ logements }) { // Ajoute la réception de la prop 'logements'
+function Home({ logements }) {
     return (
-        <div>
-            <Banner image={Banner_img} text="Chez vous, partout et ailleurs" />
-            <Gallery logements={logements} /> {/* Passe la prop 'logements' à Gallery */}
-        </div>
+        <main className="main">
+            <div className="main__container">
+                <Banner image={Banner_img} text="Chez vous, partout et ailleurs" />
+                <Gallery logements={logements} />
+            </div>
+        </main>
     );
 }
 

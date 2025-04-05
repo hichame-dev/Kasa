@@ -1,23 +1,28 @@
 .gallery {
-  background-color: rgb(246, 246, 246);
   width: 100%;
-  max-width: 80.5rem;
+  max-width: 77.5rem;
   margin: 0 auto;
   padding: 3.125rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3.125rem 3.75rem;
+  background-color: #f6f6f6;
   border-radius: 1.5625rem;
   box-sizing: border-box;
 }
-
 @media (max-width: 1024px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+    gap: 2rem;
   }
 }
 @media (max-width: 600px) {
   .gallery {
     grid-template-columns: 1fr;
+    padding: 1.25rem;
+    gap: 1.2rem;
+    background-color: transparent;
+    border-radius: 0;
   }
 }/*# sourceMappingURL=Gallery.css.map */

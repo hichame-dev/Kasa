@@ -1,19 +1,21 @@
 @use '../styles/variables' as *;
+
 .header {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 3.125rem 0; // ✅ 50px en haut et 50px en bas
-
+    margin: 3.125rem 0;
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+    box-sizing: border-box;
 
     &__container {
         width: 100%;
-        max-width: 77.5rem; // 1240px
+        max-width: $max-width;
         display: grid;
         grid-template-columns: auto 1fr;
         align-items: center;
-        column-gap: 3.125rem; // 50px
-        box-sizing: border-box;
+        column-gap: 3.125rem;
     }
 
     &__logo {
@@ -39,25 +41,43 @@
         }
     }
 
+    @media screen and (max-width: 1024px) {
+        padding-left: $padding-tablet;
+        padding-right: $padding-tablet;
+    }
+
     @media screen and (max-width: 768px) {
         &__container {
-            grid-template-columns: 1fr;
-            row-gap: 1rem;
-        }
-
-        &__nav {
-            justify-content: center;
-            gap: 1.25rem;
-
-            a {
-                font-size: 1.125rem;
-            }
+            display: flex; // ✅ remplace le grid par flex
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 1rem;
         }
 
         &__logo {
-            height: 1.875rem;
-            margin: 0 auto;
+            max-width: 9.0625rem; // 145px
+            height: auto;
+            flex-shrink: 1; // ✅ autorise la réduction si besoin
+        }
+
+        &__nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            white-space: nowrap;
+            gap: 1rem;
+
+            a {
+                font-size: 1.125rem;
+                white-space: nowrap;
+            }
         }
     }
-}
 
+    @media screen and (max-width: 480px) {
+        padding-left: $padding-small;
+        padding-right: $padding-small;
+    }
+}
