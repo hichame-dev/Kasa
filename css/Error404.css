@@ -1,64 +1,21 @@
-.error404 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 2rem;
+.error {
+  width: 100%;
   text-align: center;
+  color: #ff6060;
+  padding: 4rem 1rem;
+  font-family: "Montserrat", sans-serif;
 }
-.error404__code {
-  width: 59.7rem;
-  height: 26.3rem;
-  font-size: 18rem;
-  font-weight: bold;
-  color: #FF6060;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.error__code {
+  font-size: 10rem;
+  font-weight: 700;
+  margin: 0;
 }
-.error404__message {
-  margin-top: 13.9rem;
-  font-size: 2.4rem;
-  color: #000000;
+.error__message {
+  font-size: 1.5rem;
+  margin: 2rem 0;
 }
-.error404__link {
-  margin-top: 13rem;
-  font-size: 1.6rem;
+.error__link {
+  font-size: 1.125rem;
+  color: #ff6060;
   text-decoration: underline;
-  color: #000000;
-  transition: opacity 0.3s;
-}
-.error404__link:hover {
-  opacity: 0.7;
-}
-
-@media (max-width: 768px) {
-  .error404__code {
-    width: auto;
-    height: auto;
-    font-size: 10rem;
-  }
-  .error404__message {
-    margin-top: 6rem;
-    font-size: 1.6rem;
-  }
-  .error404__link {
-    margin-top: 6rem;
-    font-size: 1.4rem;
-  }
-}
-@media (max-width: 768px) {
-  .error404__code {
-    width: auto;
-    height: auto;
-    font-size: 10rem;
-  }
-  .error404__message {
-    margin-top: 6rem;
-    font-size: 1.6rem;
-  }
-  .error404__link {
-    font-size: 1.4rem;
-  }
 }/*# sourceMappingURL=Error404.css.map */
