@@ -1,3 +1,4 @@
+// src/styles/Gallery.scss
 .gallery {
     background-color: rgba(246, 246, 246, 1);
     width: 100%;
@@ -6,9 +7,23 @@
     padding: 3.125rem; // 50px
     display: grid;
 
-    // ✅ Grille responsive avec cartes de 340px
-    grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr)); // 340px
+    // ✅ Grille fixe à 3 colonnes
+    grid-template-columns: repeat(3, 1fr);
     gap: 3.125rem 3.75rem; // 50px vertical / 60px horizontal
+
     border-radius: 1.5625rem; // 25px
     box-sizing: border-box;
+}
+
+// ✅ Responsive
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }

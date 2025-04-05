@@ -1,7 +1,8 @@
 .card {
   position: relative;
-  width: 21.25rem;
-  height: 21.25rem;
+  width: 100%;
+  max-width: 21.25rem;
+  aspect-ratio: 1/1;
   border-radius: 0.625rem;
   overflow: hidden;
   display: block;

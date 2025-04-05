@@ -1,24 +1,51 @@
-.error {
-    width: 100%; // ✅ Force la prise de toute la largeur dispo dans .main-container
+@use '../styles/variables' as *;
+
+.erreur404 {
     text-align: center;
-    color: #ff6060;
-    padding: 4rem 1rem;
-    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    &__code {
-        font-size: 10rem;
+    flex: 1;
+    min-height: calc(100vh - 13rem);
+    padding: 4rem 0;
+
+    transform: translateY(-100px); // ✅ remonte tout de 100px
+
+    h1 {
+        font-size: 12rem;
         font-weight: 700;
-        margin: 0;
-    }
-
-    &__message {
-        font-size: 1.5rem;
-        margin: 2rem 0;
-    }
-
-    &__link {
-        font-size: 1.125rem;
         color: #ff6060;
+    }
+
+    p {
+        font-size: 2.25rem;
+        margin: 2rem 0;
+        color: #ff6060; // ✅ même couleur que le "404"
+    }
+
+    a {
+        font-size: 1.25rem;
+        color: $color-black;
         text-decoration: underline;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 6rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        a {
+            font-size: 1rem;
+        }
     }
 }

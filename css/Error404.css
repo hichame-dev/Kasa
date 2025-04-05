@@ -1,21 +1,40 @@
-.error {
-  width: 100%;
+.erreur404 {
   text-align: center;
-  color: #ff6060;
-  padding: 4rem 1rem;
-  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-height: calc(100vh - 13rem);
+  padding: 4rem 0;
+  transform: translateY(-100px);
 }
-.error__code {
-  font-size: 10rem;
+.erreur404 h1 {
+  font-size: 12rem;
   font-weight: 700;
-  margin: 0;
-}
-.error__message {
-  font-size: 1.5rem;
-  margin: 2rem 0;
-}
-.error__link {
-  font-size: 1.125rem;
   color: #ff6060;
+}
+.erreur404 p {
+  font-size: 2.25rem;
+  margin: 2rem 0;
+  color: #ff6060;
+}
+.erreur404 a {
+  font-size: 1.25rem;
+  color: #000;
   text-decoration: underline;
+}
+.erreur404 a:hover {
+  opacity: 0.7;
+}
+@media (max-width: 768px) {
+  .erreur404 h1 {
+    font-size: 6rem;
+  }
+  .erreur404 p {
+    font-size: 1.5rem;
+  }
+  .erreur404 a {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=Error404.css.map */

@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import FicheLogement from './pages/FicheLogement';
 import Error404 from './pages/Error404';
 import logementsData from './components/data/logements.json';
+import APropos from './pages/APropos';
+
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home logements={logements} />} />
         <Route path="/fiche-logement/:id" element={<FicheLogement />} />
+        <Route path="/a-propos" element={<APropos />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </Layout>

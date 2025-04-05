@@ -1,6 +1,18 @@
-.apropos__collapses {
+.a-propos {
   display: flex;
   flex-direction: column;
-  gap: 2.8rem;
-  margin: 4rem 0;
-}/*# sourceMappingURL=Apropos.css.map */
+  align-items: center;
+}
+.a-propos .collapse {
+  width: 100%;
+  max-width: 1030px;
+}
+
+@media (max-width: 768px) {
+  .a-propos {
+    padding: 1rem 0;
+  }
+  .collapse {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=APropos.css.map */

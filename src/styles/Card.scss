@@ -1,8 +1,12 @@
 @use '../styles/variables' as *;
+
 .card {
     position: relative;
-    width: 21.25rem; // 340px
-    height: 21.25rem; // 340px
+
+    // ✅ Responsive : prend toute la largeur de sa colonne
+    width: 100%;
+    max-width: 21.25rem; // 340px
+    aspect-ratio: 1 / 1; // ✅ carré fluide
     border-radius: 0.625rem; // 10px
     overflow: hidden;
     display: block;
@@ -29,9 +33,9 @@
     &__title {
         position: absolute;
         left: 1.25rem; // 20px
-        bottom: 1.25rem; // 20px
+        bottom: 1.25rem;
         color: white;
-        font-family: 'Montserrat', sans-serif;
+        font-family: $font-main;
         font-weight: 700;
         font-size: 1.125rem; // 18px
         line-height: 1.43;
