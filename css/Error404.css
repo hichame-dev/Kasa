@@ -12,12 +12,12 @@
 .erreur404 h1 {
   font-size: 12rem;
   font-weight: 700;
-  color: #ff6060;
+  color: #FF6060;
 }
 .erreur404 p {
   font-size: 2.25rem;
   margin: 2rem 0;
-  color: #ff6060;
+  color: #FF6060;
 }
 .erreur404 a {
   font-size: 1.25rem;
@@ -28,6 +28,12 @@
   opacity: 0.7;
 }
 @media (max-width: 768px) {
+  .erreur404 {
+    padding-left: 60px;
+    /* Padding gauche de 60px */
+    padding-right: 60px;
+    /* Padding droit de 60px */
+  }
   .erreur404 h1 {
     font-size: 6rem;
   }

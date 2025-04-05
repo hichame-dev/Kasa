@@ -1,24 +1,23 @@
+@use '../styles/variables' as *;
+
 .a-propos {
     display: flex;
     flex-direction: column;
-    align-items: center; // ✅ centre horizontalement les enfants
-    // ✅ espace entre les Collapse
+    align-items: center;
+    width: 100%;
+    gap: 1.25rem;
 
-
-    // Tous les Collapse à l’intérieur
     .collapse {
         width: 100%;
         max-width: 1030px;
+        box-sizing: border-box;
     }
 }
 
-// ✅ Responsive mobile
 @media (max-width: 768px) {
-    .a-propos {
-        padding: 1rem 0;
+    
+        .collapse {
+            max-width: none; // ✅ évite tout débordement
+            width: 100%;
+        }
     }
-
-    .collapse {
-        max-width: 100%;
-    }
-}

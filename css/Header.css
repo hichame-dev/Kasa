@@ -9,7 +9,7 @@
 }
 .header__container {
   width: 100%;
-  max-width: 77.5rem;
+  max-width: 90rem;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -23,7 +23,7 @@
 .header__nav {
   display: flex;
   justify-content: flex-end;
-  gap: 3.125rem;
+  gap: 3.5625rem;
 }
 .header__nav a {
   font-family: "Montserrat", sans-serif;

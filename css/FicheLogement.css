@@ -9,7 +9,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 2.25rem;
   font-weight: 500;
-  color: #ff6060;
+  color: #FF6060;
   margin: 0;
   max-width: 39.6875rem;
 }
@@ -24,8 +24,8 @@
   gap: 0.625rem;
 }
 .fiche-header .infos .tags .tag {
-  background-color: #ff6060;
-  color: white;
+  background-color: #FF6060;
+  color: #fff;
   padding: 0.3rem 1rem;
   border-radius: 0.625rem;
   font-size: 0.875rem;
@@ -52,7 +52,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
-  color: #ff6060;
+  color: #FF6060;
   padding: 0.2rem 0.8rem;
   border-radius: 0.5rem;
   display: flex;
@@ -107,5 +107,52 @@
 @media (max-width: 768px) {
   .fiche-collapse {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .fiche-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0;
+  }
+  .host-rating {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .host-rating .host {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .host-rating .host span {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .host-rating .rating {
+    gap: 0.2rem;
+    flex-direction: row-reverse;
+  }
+  .host-rating .rating .star {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-direction: row-reverse;
+  }
+  .infos h1 {
+    font-size: 1.5rem;
+  }
+  .infos p {
+    font-size: 1rem;
+  }
+  .infos .tag {
+    font-size: 0.75rem;
+    min-width: auto;
+    height: auto;
+    padding: 0.25rem 0.75rem;
   }
 }/*# sourceMappingURL=FicheLogement.css.map */

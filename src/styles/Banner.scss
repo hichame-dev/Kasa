@@ -1,5 +1,8 @@
 @use '../styles/variables' as *;
 
+// ---- Variables nécessaires ----
+
+
 .banner-wrapper {
     width: 100%;
     box-sizing: border-box;
@@ -8,12 +11,12 @@
 
 .banner {
     width: 100%;
-    max-width: 100rem; // 1600px (tu peux ajuster si besoin)
+    max-width: $max-width; // 1440px (cf. variables.scss)
     height: 13.9375rem; // 223px desktop
     border-radius: 1.5625rem; // 25px
     overflow: hidden;
     position: relative;
-    background-color: black;
+    background-color: $color-black;
     margin: 0 auto;
 
     &__img {
@@ -38,48 +41,44 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: white;
-        font-size: 3rem; // desktop
+        color: $color-white;
+        font-size: 3rem; // 48px desktop
         font-weight: 700;
         line-height: 1.43;
         z-index: 2;
         text-align: center;
         padding: 0 1rem;
         text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
-        white-space: nowrap;
+        white-space: nowrap; // empêche le retour à la ligne
     }
 
-    // 🔁 Responsive tablette
+    // 🔁 Responsive tablette (≤1024px)
     @media (max-width: 1024px) {
-        height: 10rem; // ~160px
+        height: 10rem;
 
         &__text {
             font-size: 2rem;
             left: 1.5rem;
-            top: 50%;
             transform: translateY(-50%);
             text-align: left;
             white-space: normal;
         }
     }
 
-    // 🔁 Responsive mobile
-    @media (max-width: 768px) {
-        height: 7.25rem; // ~116px
-
-.banner {
+    // 🔁 Responsive mobile (≤768px)
+    @media (max-width: $breakpoint-mobile) {
         height: 6.9375rem; // 111px
-    }
+
         &__text {
             font-size: 1.5rem;
             left: 1rem;
-            top: 50%;
             transform: translateY(-50%);
         }
     }
 
+    // 🔁 Petits écrans (≤480px)
     @media (max-width: 480px) {
-        height: 6.25rem; // ~100px
+        height: 6.25rem; // 100px
 
         &__text {
             font-size: 1.25rem;

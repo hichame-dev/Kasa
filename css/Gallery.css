@@ -1,12 +1,12 @@
 .gallery {
   width: 100%;
-  max-width: 77.5rem;
+  max-width: 90rem;
   margin: 0 auto;
   padding: 3.125rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3.125rem 3.75rem;
-  background-color: #f6f6f6;
+  background-color: rgb(246, 246, 246);
   border-radius: 1.5625rem;
   box-sizing: border-box;
 }

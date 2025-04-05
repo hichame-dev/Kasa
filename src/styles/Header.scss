@@ -1,5 +1,8 @@
 @use '../styles/variables' as *;
 
+
+
+
 .header {
     width: 100%;
     display: flex;
@@ -26,13 +29,13 @@
     &__nav {
         display: flex;
         justify-content: flex-end;
-        gap: 3.125rem;
+        gap: $gap-between-links; // Utilisation de la variable d'espacement
 
         a {
-            font-family: 'Montserrat', sans-serif;
+            font-family: $font-main;
             font-size: 1.5rem;
             font-weight: 500;
-            color: #000;
+            color: $color-black; // Utilisation de la variable de couleur
             text-decoration: none;
 
             &.active {
@@ -48,7 +51,7 @@
 
     @media screen and (max-width: 768px) {
         &__container {
-            display: flex; // ✅ remplace le grid par flex
+            display: flex; // ✅ Remplace le grid par flex
             justify-content: space-between;
             align-items: center;
             flex-wrap: nowrap;
@@ -58,7 +61,7 @@
         &__logo {
             max-width: 9.0625rem; // 145px
             height: auto;
-            flex-shrink: 1; // ✅ autorise la réduction si besoin
+            flex-shrink: 1; // ✅ Autorise la réduction si besoin
         }
 
         &__nav {

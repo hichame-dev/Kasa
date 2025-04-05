@@ -1,14 +1,17 @@
 @use '../styles/variables' as *;
 
+
+
+
 .gallery {
     width: 100%;
     max-width: $max-width;
     margin: 0 auto;
-    padding: 3.125rem;
+    padding: $gallery-padding; // Utilisation de la variable pour le padding
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3.125rem 3.75rem;
-    background-color: #f6f6f6;
+    gap: $gallery-gap-y $gallery-gap-x; // Utilisation des variables pour les gaps
+    background-color: $gallery-bg; // Utilisation de la variable pour la couleur de fond
     border-radius: 1.5625rem;
     box-sizing: border-box;
 

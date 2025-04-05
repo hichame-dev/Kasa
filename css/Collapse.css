@@ -4,18 +4,19 @@
 }
 .collapse__toggle {
   all: unset;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 3.25rem;
   padding: 0 1rem;
-  background-color: rgb(255, 96, 96);
+  background-color: #FF6060;
   border-radius: 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
-  color: white;
+  color: #fff;
   cursor: pointer;
 }
 .collapse__arrow {
@@ -42,4 +43,23 @@
   font-size: 1.125rem;
   color: #000;
   border-radius: 0 0 10px 10px;
+}
+
+@media (max-width: 768px) {
+  .collapse {
+    margin-bottom: 1rem;
+  }
+  .collapse__toggle {
+    height: 2.5rem;
+    font-size: 1rem;
+    padding: 0 1.25rem;
+  }
+  .collapse__arrow {
+    width: 1.25rem;
+    height: 0.75rem;
+  }
+  .collapse__content {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=Collapse.css.map */

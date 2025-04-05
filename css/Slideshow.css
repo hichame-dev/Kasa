@@ -47,10 +47,15 @@
   right: 50%;
   transform: translateX(50%);
   background: rgba(0, 0, 0, 0.6);
-  color: white;
+  color: #fff;
   padding: 0.2rem 0.5rem;
   border-radius: 0.3rem;
   font-size: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .counter {
+    display: none;
+  }
 }
 
 .slideshow-empty {
@@ -58,4 +63,26 @@
   font-style: italic;
   color: #999;
   padding: 2rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .slideshow {
+    width: 20.9375rem;
+    height: 15.9375rem;
+    margin: 2rem auto;
+  }
+  .prev,
+  .next {
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+  .prev img,
+  .next img {
+    width: 1.6875rem;
+    height: 1.5rem;
+    -o-object-fit: contain;
+       object-fit: contain;
+    filter: drop-shadow(0 0 0.75px white);
+  }
 }/*# sourceMappingURL=Slideshow.css.map */
