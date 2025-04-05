@@ -49,17 +49,18 @@ function FicheLogement() {
             </div>
 
             <div className="collapses-container">
-                <Collapse title="Description">
+                <Collapse title="Description" className="fiche-collapse">
                     <p>{logement.description}</p>
                 </Collapse>
-                <Collapse title="Équipements">
+                <Collapse title="Équipements" className="fiche-collapse">
                     <ul>
-                        {logement.equipments.map(equipment => (
-                            <li key={equipment}>{equipment}</li> // Liste dynamique des équipements
+                        {logement.equipments.map((equipment) => (
+                            <li key={equipment}>{equipment}</li>
                         ))}
                     </ul>
                 </Collapse>
             </div>
+
         </div>
     );
 }

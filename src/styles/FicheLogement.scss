@@ -92,3 +92,30 @@
             }
         }
 }
+
+.collapses-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 4.875rem; // 78px
+    max-width: 1240px;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+.fiche-collapse {
+    width: 36.375rem; // 582px
+    border-radius: 10px;
+    padding: 10px 20px 10px 10px;
+
+    .collapse__toggle {
+        height: 52px;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}

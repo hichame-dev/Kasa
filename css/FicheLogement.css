@@ -79,4 +79,33 @@
 }
 .host-rating .rating .star.filled {
   filter: brightness(100%);
+}
+
+.collapses-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 4.875rem;
+  max-width: 1240px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .collapses-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.fiche-collapse {
+  width: 36.375rem;
+  border-radius: 10px;
+  padding: 10px 20px 10px 10px;
+}
+.fiche-collapse .collapse__toggle {
+  height: 52px;
+}
+@media (max-width: 768px) {
+  .fiche-collapse {
+    width: 100%;
+  }
 }/*# sourceMappingURL=FicheLogement.css.map */

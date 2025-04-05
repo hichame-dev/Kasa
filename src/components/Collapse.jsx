@@ -1,28 +1,28 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
+import chevron from '../assets/chevron.svg';
 import '../styles/Collapse.scss';
 
-function Collapse({ title, children }) {
+function Collapse({ title, children, className = '' }) {
     const [isOpen, setIsOpen] = useState(false);
-    const contentRef = useRef();
 
     const toggleCollapse = () => {
         setIsOpen(!isOpen);
     };
 
     return (
-        <div className="collapse">
-            <button className="collapse__header" onClick={toggleCollapse}>
+        <div className={`collapse ${className}`}>
+            <button className="collapse__toggle" onClick={toggleCollapse}>
                 {title}
-                <span className={`collapse__arrow ${isOpen ? 'open' : ''}`}>⌄</span>
+                <span className={`collapse__arrow ${isOpen ? 'open' : ''}`}>
+                    <img src={chevron} alt="Chevron" />
+                </span>
             </button>
 
-            <div
-                ref={contentRef}
-                className="collapse__content"
-                style={{ height: isOpen ? contentRef.current.scrollHeight : 0 }}
-            >
-                <div className="collapse__inner">{children}</div>
-            </div>
+            {isOpen && (
+                <div className="collapse__content">
+                    <div className="collapse__inner">{children}</div>
+                </div>
+            )}
         </div>
     );
 }
