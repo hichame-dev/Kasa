@@ -1,0 +1,23 @@
+@use '../styles/variables' as *;
+
+.a-propos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.25rem;
+
+    .collapse {
+        width: 100%;
+        max-width: 1030px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 768px) {
+    
+        .collapse {
+            max-width: none; // ✅ évite tout débordement
+            width: 100%;
+        }
+    }

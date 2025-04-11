@@ -1,0 +1,35 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  height: 13.0625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 1.25rem;
+}
+.footer__logo {
+  width: 7.625rem;
+  height: 2.465rem;
+  margin-bottom: 1.25rem;
+}
+.footer__text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  max-width: 20rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 0 1.25rem;
+  }
+  .footer__logo {
+    width: 6.25rem;
+    height: auto;
+  }
+  .footer__text {
+    font-size: 0.8125rem;
+  }
+}/*# sourceMappingURL=Footer.css.map */

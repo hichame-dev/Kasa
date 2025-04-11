@@ -1,0 +1,31 @@
+@use '../styles/variables' as *;
+
+
+
+
+.gallery {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: $gallery-padding; // Utilisation de la variable pour le padding
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $gallery-gap-y $gallery-gap-x; // Utilisation des variables pour les gaps
+    background-color: $gallery-bg; // Utilisation de la variable pour la couleur de fond
+    border-radius: 1.5625rem;
+    box-sizing: border-box;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        padding: 1.25rem; // ✅ padding 20px
+        gap: 1.2rem; // 10px
+        background-color: transparent; // ❌ plus de fond gris
+        border-radius: 0; // ❌ plus d'arrondis
+    }
+}

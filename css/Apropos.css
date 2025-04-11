@@ -1,0 +1,19 @@
+.a-propos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1.25rem;
+}
+.a-propos .collapse {
+  width: 100%;
+  max-width: 1030px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .collapse {
+    max-width: none;
+    width: 100%;
+  }
+}/*# sourceMappingURL=APropos.css.map */

@@ -1,0 +1,44 @@
+@use '../styles/variables' as *;
+
+.card {
+    position: relative;
+
+    // ✅ Responsive : prend toute la largeur de sa colonne
+    width: 100%;
+    max-width: 21.25rem; // 340px
+    aspect-ratio: 1 / 1; // ✅ carré fluide
+    border-radius: 0.625rem; // 10px
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(10, 10, 10, 0) 35%,
+                rgba(4, 4, 4, 0.41) 73%,
+                rgba(0, 0, 0, 1) 100%);
+        z-index: 1;
+    }
+
+    &__title {
+        position: absolute;
+        left: 1.25rem; // 20px
+        bottom: 1.25rem;
+        color: white;
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: 1.125rem; // 18px
+        line-height: 1.43;
+        z-index: 2;
+    }
+}

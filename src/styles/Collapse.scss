@@ -1,0 +1,77 @@
+@use '../styles/variables' as *;
+
+
+
+
+.collapse {
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    &__toggle {
+        all: unset;
+        box-sizing: border-box; // ✅ limite le débordement lié au padding
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 3.25rem; // 52px
+        padding: 0 1rem;
+        background-color: $color-primary; // Utilisation de la variable de couleur
+        border-radius: 10px;
+        font-family: $font-main;
+        font-size: 1.125rem; // 18px
+        font-weight: 700;
+        color: $color-white; // Utilisation de la variable de couleur
+        cursor: pointer;
+    }
+
+    &__arrow {
+        width: 1.5rem; // 24px
+        height: 0.875rem; // 14px
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+
+        &.open {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__content {
+        background-color: $color-background; // Utilisation de la variable de couleur de fond
+        padding: 1rem;
+        font-size: 1.125rem;
+        color: #000;
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .collapse {
+        margin-bottom: 1rem;
+
+        &__toggle {
+            height: 2.5rem; // 40px
+            font-size: 1rem;
+            padding: 0 1.25rem; // ✅ 20px padding mobile
+        }
+
+        &__arrow {
+            width: 1.25rem;
+            height: 0.75rem;
+        }
+
+        &__content {
+            padding: 0.75rem 1.25rem;
+            font-size: 1rem;
+        }
+    }
+}

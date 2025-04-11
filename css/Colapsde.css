@@ -1,0 +1,29 @@
+.colapsde {
+  background-color: rgb(255, 96, 96);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.colapsde-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.colapsde-content {
+  background-color: #f6f6f6;
+  color: #000;
+  font-size: 1.125rem;
+  padding: 1rem;
+}
+.colapsde .chevron {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+.colapsde .chevron.open {
+  transform: rotate(180deg);
+}/*# sourceMappingURL=Colapsde.css.map */

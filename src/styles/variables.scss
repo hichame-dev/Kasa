@@ -1,0 +1,50 @@
+// ---- Breakpoints ----
+$breakpoint-mobile: 768px;
+
+// ---- Fonts ----
+$font-main: 'Montserrat', sans-serif;
+$font-size-nav: 1.5rem; // 24px
+$font-weight-medium: 500;
+
+// ---- Couleurs ----
+$color-primary: #FF6060; // Couleur principale (le rouge)
+$color-black: #000; // Couleur noire (texte principal)
+$color-white: #fff; // Couleur blanche (texte et arrière-plan)
+$color-background: #f6f6f6; // Couleur de fond générale
+
+// ---- Header ----
+$header-width: 77.5rem; // 1240px
+$header-height: 4.25rem; // 68px
+$header-margin-top: 2.8125rem; // 45px
+$header-logo-width: 13.125rem; // 210px
+$header-logo-height: 4.25rem; // 68px
+$gap-between-links: 3.5625rem; // 57px
+$space-between-logo-nav: 45rem; // 720px
+
+// ---- Layout général ----
+$max-width: 90rem; // 1440px
+$container-padding: 6.25rem; // 100px
+$padding-desktop: 6.25rem; // 100px
+$padding-tablet: 3rem; // 48px
+$padding-mobile: 2rem; // 32px
+$padding-small: 1rem; // 16px
+
+// ---- Footer ----
+$footer-height: 13.0625rem; // 209px
+$footer-logo-width: 7.625rem; // 122px
+$footer-logo-height: 2.465rem; // 39.44px
+$footer-text-size: 0.75rem; // 12px
+
+// ---- Gallery ----
+$gallery-bg: rgba(246, 246, 246, 1); // Couleur de fond de la galerie
+$gallery-padding: 3.125rem; // 50px
+$gallery-radius: 1.5625rem; // 25px
+$gallery-gap-y: 3.125rem; // 50px (vertical)
+$gallery-gap-x: 3.75rem; // 60px (horizontal)
+$gallery-card-width: 21.25rem; // 340px
+
+// ---- Slideshow ----
+$slideshow-width: 100%; // Largeur par défaut
+$slideshow-height: 415px; // Hauteur par défaut
+$arrow-size: 6rem; // Taille des flèches de navigation
+$arrow-padding: 0; // Padding des flèches de navigation

@@ -1,0 +1,44 @@
+@use '../styles/variables' as *;
+
+
+
+
+.footer {
+    background-color: $color-black;
+    color: $color-white;
+    height: 13.0625rem; // 209px
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; // ✅ toujours centré verticalement
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 1.25rem; // ✅ uniquement horizontal
+
+    &__logo {
+        width: $footer-logo-width; // Utilisation de la variable pour la largeur du logo
+        height: $footer-logo-height; // Utilisation de la variable pour la hauteur du logo
+        margin-bottom: 1.25rem; // 20px
+    }
+
+    &__text {
+        font-size: 0.875rem; // 14px
+        line-height: 1.5;
+        max-width: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 0 1.25rem; // ✅ même hauteur, juste du padding horizontal
+
+        &__logo {
+            width: 6.25rem; // 100px (optionnel)
+            height: auto;
+        }
+
+        &__text {
+            font-size: 0.8125rem; // 13px (optionnel pour affiner)
+        }
+    }
+}

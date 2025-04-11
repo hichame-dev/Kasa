@@ -1,0 +1,59 @@
+@use './variables' as *;
+
+// ---- Variables nécessaires ----
+
+
+// RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    font-family: $font-main;
+    background-color: $color-white;
+    color: $color-black;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    width: 100%;
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    // Responsive padding
+    @media screen and (max-width: 1024px) {
+        padding-left: $padding-tablet;
+        padding-right: $padding-tablet;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-left: $padding-mobile;
+        padding-right: $padding-mobile;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding-left: $padding-small;
+        padding-right: $padding-small;
+    }
+
+    // Inner container (si besoin)
+    &__container {
+        width: 100%;
+        max-width: $max-width;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,59 @@
+@use '../styles/variables' as *;
+
+
+
+
+.erreur404 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+    min-height: calc(100vh - 13rem); // Ajuste la hauteur de l'erreur 404
+    padding: 4rem 0;
+
+    transform: translateY(-100px); // Remonte tout de 100px
+
+    h1 {
+        font-size: 12rem;
+        font-weight: 700;
+        color: $color-primary; // Utilisation de la variable pour la couleur
+    }
+
+    p {
+        font-size: 2.25rem;
+        margin: 2rem 0;
+        color: $color-primary; // Même couleur que le titre
+    }
+
+    a {
+        font-size: 1.25rem;
+        color: $color-black;
+        text-decoration: underline;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding-left: 60px;
+        /* Padding gauche de 60px */
+        padding-right: 60px;
+
+        /* Padding droit de 60px */
+        h1 {
+            font-size: 6rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        a {
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,183 @@
+@use '../styles/variables' as *;
+
+
+
+
+.fiche-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1240px;
+    padding: 0 1rem;
+
+    .infos {
+        h1 {
+            font-family: $font-main;
+            font-size: 2.25rem;
+            font-weight: 500;
+            color: $color-primary; // Utilisation de la variable couleur
+            margin: 0;
+            max-width: 39.6875rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: $color-black; // Utilisation de la variable couleur
+            margin: 0.25rem 0 1rem 0;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.625rem;
+
+            .tag {
+                background-color: $color-primary; // Utilisation de la variable couleur
+                color: $color-white; // Texte blanc pour les tags
+                padding: 0.3rem 1rem;
+                border-radius: 0.625rem; // 10px
+                font-size: 0.875rem;
+                font-weight: 500;
+                min-width: 7.1875rem; // 115px
+                height: 1.5625rem; // 25px
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.host-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+
+    .host {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        span {
+            font-family: $font-main;
+            font-size: 1.125rem; // 18px
+            font-weight: 500;
+            color: $color-primary; // Utilisation de la variable couleur
+
+            padding: 0.2rem 0.8rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        img {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    .rating {
+        display: flex;
+        gap: 0.3rem;
+
+        .star {
+            width: 1.546875rem; // 24.75px
+            height: 1.5rem; // 24px
+            object-fit: contain;
+        }
+
+        .star.filled {
+            filter: brightness(100%); // Optionnel si ton étoile rouge est déjà colorée
+        }
+    }
+}
+
+.collapses-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 4.875rem; // 78px
+    max-width: 1240px;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+.fiche-collapse {
+    width: 36.375rem; // 582px
+    border-radius: 10px;
+    padding: 10px 20px 10px 10px;
+
+    .collapse__toggle {
+        height: 52px;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .fiche-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 0; // car le main a déjà le padding 20px
+    }
+
+    .host-rating {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse; // ✅ étoiles à gauche, host à droite
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+
+        .host {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            span {
+                font-size: 1rem;
+                padding: 0;
+            }
+        }
+
+        .rating {
+            gap: 0.2rem;
+            flex-direction: row-reverse;
+
+            .star {
+                width: 1.25rem;
+                height: 1.25rem;
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    .infos {
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            min-width: auto;
+            height: auto;
+            padding: 0.25rem 0.75rem;
+        }
+    }
+}
